@@ -12,6 +12,11 @@ if (require("electron-squirrel-startup")) {
   app.quit();
 }
 
+app.setLoginItemSettings({
+  openAtLogin: true,
+  path: app.getPath("exe"),
+});
+
 const createWindow = (): void => {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
